@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello everybody</title>
+</head>
+<body>
+<h1>Hello everybody</h1>
+<div>
+    <p>Step 1: Add things.
+    <p>Step 2: Display them.
+    <p>Step 3: ????
+    <p>Srep 4: Replace the div with a directive</p>
+    <p>Step 4.5: Adjust data to include cost and type ?</p>
+    <p>Step 5: Use directive link for conditional formatting</p>
+    <p>Step 6: Database!!!!</p>
+    <div ng-controller="ListController as list">
+        <div ng-repeat="item in list.items">
+            {{item.id}}: {{item.text}}
+        </div>
+    </div>
+
+    <div ng-controller="AddController as add">
+        <form ng-submit="add.addItem(add.newItem)">
+            <input type="text" ng-model="add.newItem">
+            <button type="submit">Click me!</button>
+        </form>
+    </div>
+
+
+</div>
+
+<script src="/bower_components/angular/angular.js"></script>
+<script src="app-module.js"></script>
+</body>
+</html>

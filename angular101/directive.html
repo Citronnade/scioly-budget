@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Directives</title>
+    <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="app2.js"></script>
+</head>
+<body ng-app="functionalities" ng-controller="FunCtrl as fun">
+<div entering="fun.start()" leaving="fun.end()">
+    hello yes
+</div>
+
+<div entering="fun.start()" leaving="fun.end()">
+    wow another div!
+</div>
+</body>
+</html>
