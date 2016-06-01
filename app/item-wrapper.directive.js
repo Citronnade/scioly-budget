@@ -3,11 +3,11 @@
 
     angular
         .module('app')
-        .directive('soItemWrapper', itemDirective);
+        .directive('soItemWrapper', itemWrapperDirective);
 
 
     /* @ngInject */
-    function itemDirective() {
+    function itemWrapperDirective() {
         var directive = {
             bindToController: true,
             transclude: true,
@@ -16,7 +16,7 @@
             controllerAs: 'ItemWrapperController',
             link: link,
             restrict: 'E',
-            scope: {}
+            //scope: {}
         };
         return directive;
 
