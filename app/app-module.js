@@ -9,6 +9,7 @@
 
             items.add = function(item){
                 items.list.push({id: items.list.length, text: item});
+                console.log("hello yes this is the service we have ", items.list);
             };
             return items;
         })
@@ -22,6 +23,8 @@
             self.newItem = "Duct tape";
             self.addItem = function(item){
                 items.add(item);
+                console.log("added: ", item);
+                console.log("all items: ", items);
             }
         })
 

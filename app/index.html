@@ -14,11 +14,15 @@
     <p>Step 4.5: Adjust data to include cost and type ?</p>
     <p>Step 5: Use directive link for conditional formatting</p>
     <p>Step 6: Database!!!!</p>
-    <div ng-controller="ListController as list">
+    <p>Step 7: Refactor into modules?!</p>
+<!--    <div ng-controller="ListController as list">
         <div ng-repeat="item in list.items">
             {{item.id}}: {{item.text}}
         </div>
-    </div>
+    </div>-->
+    <so-item>
+        Uhm what happens.
+    </so-item>
 
     <div ng-controller="AddController as add">
         <form ng-submit="add.addItem(add.newItem)">
@@ -32,5 +36,6 @@
 
 <script src="/bower_components/angular/angular.js"></script>
 <script src="app-module.js"></script>
+<script src="item.directive.js"></script>
 </body>
 </html>
