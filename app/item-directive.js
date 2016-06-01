@@ -3,20 +3,20 @@
 
     angular
         .module('app')
-        .directive('soItem', itemDirective);
+        .directive('soItemDirective', itemDirective);
 
+    itemDirective.$inject = [''];
 
     /* @ngInject */
     function itemDirective() {
         var directive = {
             bindToController: true,
-            transclude: true,
             controller: ItemController,
+            controllerAs: 'vm',
             templateUrl: "item.template.html",
-            controllerAs: 'ItemController',
             link: link,
-            restrict: 'E',
-            scope: {}
+            restrict: 'A',
+            scope: {itemData: '='}
         };
         return directive;
 
@@ -25,12 +25,11 @@
         }
     }
 
-    ItemController.$inject = ['items'];
+    ItemController.$inject = [''];
 
     /* @ngInject */
-    function ItemController(items) {
-        var self = this;
-        self.items = items.list;
+    function ItemController() {
+
     }
 
 })();

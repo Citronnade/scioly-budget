@@ -20,9 +20,9 @@
             {{item.id}}: {{item.text}}
         </div>
     </div>-->
-    <so-item>
+    <so-item-wrapper>
         Uhm what happens.
-    </so-item>
+    </so-item-wrapper>
 
     <div ng-controller="AddController as add">
         <form ng-submit="add.addItem(add.newItem)">
@@ -36,6 +36,7 @@
 
 <script src="/bower_components/angular/angular.js"></script>
 <script src="app-module.js"></script>
-<script src="item.directive.js"></script>
+<script src="item-wrapper.directive.js"></script>
+<script src="item-directive.js"></script>
 </body>
 </html>
