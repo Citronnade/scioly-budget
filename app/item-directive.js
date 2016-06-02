@@ -10,17 +10,22 @@
     function itemDirective() {
         var directive = {
             bindToController: true,
-            transclude: true,
+            //transclude: true,
             controller: ItemController,
             controllerAs: 'vm',
             templateUrl: "item.template.html",
+            //scope: {itemData: '='},
             link: link,
-            restrict: 'E',
-            scope: {itemData: '='}
+            restrict: 'E'
+
         };
         return directive;
 
-        function link(scope, element, attrs) {
+        function link(scope, element, attrs, controller) {
+            console.log(scope.itemData);
+            console.log("scope", scope);
+            console.log("current item", scope.item);
+            console.log("controller", controller);
         }
     }
 
@@ -29,8 +34,12 @@
     /* @ngInject */
     function ItemController() {
         var self = this;
-        self.currentItem = itemData; //TODO: GET DATA BINDING WORKING
-        console.log(currentItem);
+        console.log("self", self);
+        console.log(self.itemData);
+        //console.log(scope);
+        //console.log($scope);
+        //self.currentItem = itemData; //TODO: GET DATA BINDING WORKING
+        //console.log(currentItem);
     }
 
 })();
