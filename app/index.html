@@ -2,6 +2,7 @@
 <html lang="en" ng-app="app">
 <head>
     <meta charset="UTF-8">
+    <link type = "text/css" rel="stylesheet" href="style.css">
     <title>Hello everybody</title>
 </head>
 <body>
@@ -22,7 +23,7 @@
     </div>-->
     <so-item-wrapper>
         Uhm what happens.<br>
-        <label><input type="checkbox" id="id1" ng-model="id1" ng-change="checkboxChanged('id1', id1)">Hello this is the first checkbox</label> <br>
+        <label><input type="checkbox" id="id1" ng-model="id1" ng-change="ItemWrapperController.help('id1', id1)">Hello this is the first checkbox</label> <br>
         <label><input type="checkbox" id="id2" ng-model="id2" ng-change="checkboxChanged('id2', id2)">Hello this is the second checkbox</label>
     </so-item-wrapper>
 
@@ -40,6 +41,7 @@
 <script src="app-module.js"></script>
 <script src="item-directive.js"></script>
 <script src="item-wrapper.directive.js"></script>
+
 
 </body>
 </html>

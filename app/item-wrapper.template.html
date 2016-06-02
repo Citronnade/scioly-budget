@@ -2,6 +2,6 @@
     <div ng-transclude></div>
     Testing please work??
     <div ng-repeat="item in ItemWrapperController.items">
-        <so-item item-data="{{item}}"></so-item>
+        <so-item ng-class="{alpha: item.apha}" item-data="{{item}}"></so-item>
     </div>
 </div>

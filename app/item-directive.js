@@ -23,10 +23,7 @@
         return directive;
 
         function link(scope, element, attrs, controller) {
-            console.log(scope.itemData);
-            console.log("scope", scope);
-            console.log("current item", scope.item);
-            console.log("controller", controller);
+            controller.addItem(scope);
         }
     }
 
