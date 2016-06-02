@@ -14,8 +14,9 @@
             controller: ItemController,
             controllerAs: 'vm',
             templateUrl: "item.template.html",
-            //scope: {itemData: '='},
+            //scope: {itemData: '='}, //TODO: Use isolate scope and binding or parent?
             link: link,
+            require: '^soItemWrapper',
             restrict: 'E'
 
         };
@@ -38,7 +39,7 @@
         console.log(self.itemData);
         //console.log(scope);
         //console.log($scope);
-        //self.currentItem = itemData; //TODO: GET DATA BINDING WORKING
+        //self.currentItem = itemData; 
         //console.log(currentItem);
     }
 
