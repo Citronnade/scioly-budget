@@ -20,12 +20,11 @@
         };
         return directive;
 
-        function link(scope, element, attrs) { //TODO: Refactor so that checkbox values are passed in to one function!!!
-            scope.changeOne = function(value){
-                console.log("1");
-                console.log(a);
+        function link(scope, element, attrs) {
+            scope.checkboxChanged = function(id, value){
+                console.log("id", id);
+                console.log("value", value);
             };
-            scope.changeTwo = function(value){console.log("2")};
         }
     }
 
